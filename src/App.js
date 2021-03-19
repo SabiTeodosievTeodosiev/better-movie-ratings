@@ -1,18 +1,16 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
-import MovieCard from './components/MovieCard';
-import MovieList from './components/MovieList';
-import UserCard from './components/UserCard';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-          <Header />
-          <Footer />
-    </div>
-  );
+    return (
+        <div className="site-wrapper">
+            <Header>Passing down props</Header>
+            <Main />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
