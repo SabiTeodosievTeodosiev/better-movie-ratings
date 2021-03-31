@@ -1,6 +1,8 @@
+import "./UserCard.css";
+
 function UserCard() {
     return (
-        <h3>test</h3>
+        <div></div>
 );
 }
 

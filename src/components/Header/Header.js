@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import './Header.css';
+import Logo from "../Logo/Logo";
+import HeaderNav from "../HeaderNav/HeaderNav";
 
+//I prefer functional components but I am leaving a few class components in order to prove that I have learnt them
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -10,13 +13,8 @@ class Header extends Component {
         return (
             <div>
                 <header className='header'>
-                    <section className='logo'>Better Movie Ratings</section>
-                    <ul className='header-nav'>
-                        <li className='header-nav-item'>Home</li>
-                        <li className='header-nav-item'>Movies</li>
-                        <li className='header-nav-item'>Favourites</li>
-                        <li className='header-nav-item'>About</li>
-                    </ul>
+                    <Logo />
+                    <HeaderNav />
                 </header>
             </div>
         );

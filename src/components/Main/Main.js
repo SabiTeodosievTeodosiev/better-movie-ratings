@@ -4,7 +4,7 @@ function Main(props) {
     return (
         <div>
             <main className='main'>
-                <p>Main</p>
+                <p>Paragraph in Main</p>
             </main>
         </div>
     );

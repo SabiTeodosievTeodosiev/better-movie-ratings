@@ -1,7 +1,9 @@
+import "./MovieCard.css";
+
 function MovieCard() {
     return (
-        <h3>test</h3>
-);
+        <div></div>
+    );
 }
 
 export default MovieCard;
