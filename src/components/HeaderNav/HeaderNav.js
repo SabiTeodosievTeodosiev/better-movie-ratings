@@ -1,4 +1,4 @@
-import "HeaderNav.css";
+import "./HeaderNav.css";
 
 function HeaderNav(props) {
     return (
