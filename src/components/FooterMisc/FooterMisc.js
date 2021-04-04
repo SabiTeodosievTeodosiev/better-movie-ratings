@@ -2,7 +2,7 @@ import "./FooterMisc.css";
 
 function FooterMisc(props) {
     return (
-        <div></div>
+        <div className="footer-misc"></div>
     );
 }
 

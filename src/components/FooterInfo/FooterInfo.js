@@ -2,7 +2,7 @@ import "./FooterInfo.css";
 
 function FooterInfo(props) {
     return (
-        <div></div>
+        <div className="footer-info"></div>
     );
 }
 

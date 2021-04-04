@@ -11,12 +11,10 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
-                <header className='header'>
-                    <Logo />
-                    <HeaderNav />
-                </header>
-            </div>
+            <header className='header'>
+                <Logo />
+                <HeaderNav />
+            </header>
         );
     }
 }

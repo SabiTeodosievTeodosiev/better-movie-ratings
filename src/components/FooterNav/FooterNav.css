@@ -1,0 +1,7 @@
+.footer-nav {
+    list-style: none;
+}
+
+.footer-nav-li {
+    border: 2px solid pink;
+}
