@@ -2,7 +2,7 @@ import "./FooterMisc.css";
 
 function FooterMisc(props) {
     return (
-        <div className="footer-misc"></div>
+        <section className="footer-misc">Better Movie Ratings&copy; All rights reserved.</section>
     );
 }
 

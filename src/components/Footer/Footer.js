@@ -10,7 +10,6 @@ function Footer() {
             <FooterInfo />
             <FooterNav />
             <FooterMisc />
-            <section className='footer-nav-copyright'>Better Movie Ratings&copy; All rights reserved.</section>
         </footer>
     );
 }

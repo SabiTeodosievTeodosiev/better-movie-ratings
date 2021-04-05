@@ -1,0 +1,19 @@
+.footer-info {
+    font-family: serif;
+    font-weight: 400;
+}
+
+.footer-info h3 {
+    color: rgb(115, 255, 0);
+}
+
+.footer-info-ul {
+    color: rgb(0, 140, 255);
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+
+}

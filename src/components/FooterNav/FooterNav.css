@@ -1,7 +1,10 @@
 .footer-nav {
+    color: rgb(45,45,45);
+}
+
+.footer-nav-ul {
     list-style: none;
 }
 
 .footer-nav-li {
-    border: 2px solid pink;
 }
