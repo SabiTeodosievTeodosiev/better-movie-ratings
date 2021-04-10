@@ -1,8 +1,8 @@
 import "./MovieCard.css";
 
-function MovieCard() {
+function MovieCard(props) {
     return (
-        <div></div>
+        <div className='movie-card'></div>
     );
 }
 
