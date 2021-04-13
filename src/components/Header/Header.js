@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Logo from "../Logo/Logo";
-import HeaderNav from "../HeaderNav/HeaderNav";
+import HeaderLogo from "./HeaderLogo/HeaderLogo";
+import HeaderNav from "./HeaderNav/HeaderNav";
 import './Header.css';
 
 class Header extends Component {
@@ -11,7 +11,7 @@ class Header extends Component {
     render() {
         return (
             <header className='header'>
-                <Logo />
+                <HeaderLogo />
                 <HeaderNav />
             </header>
         );

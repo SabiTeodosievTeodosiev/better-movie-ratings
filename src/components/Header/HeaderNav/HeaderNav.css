@@ -11,7 +11,7 @@
 
 }
 
-.header-nav-li {
+.header-nav li {
     padding: 0.5rem 1rem;
     border: 2px solid orange;
     border-radius: 0.4rem;
@@ -21,9 +21,9 @@
     font-weight: 600;
     text-shadow: 2px 2px 2px rgba(0,0,0,20%);
     letter-spacing: 1.5px;
-    background-color: rgba(255,255,0,0.2);
+    background-color: rgb(223, 226, 28);
 }
 
-.header-nav-li:last-child {
+.header-nav li:last-child {
     margin-right: 0;
 }

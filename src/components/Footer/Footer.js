@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import FooterInfo from '../FooterInfo/FooterInfo';
-import FooterNav from '../FooterNav/FooterNav';
-import FooterMisc from '../FooterMisc/FooterMisc';
+import FooterInfo from './FooterInfo/FooterInfo';
+import FooterNav from './FooterNav/FooterNav';
+import FooterMisc from './FooterMisc/FooterMisc';
 import './Footer.css';
 
 class Footer extends Component {

@@ -29,19 +29,20 @@ function Form(props) {
 
     return (
         <form className='form' method='post' onSubmit={submitHandler}>
-            <legend className="form-legend">{props.type + " Form"}</legend>
             <fieldset>
-                <legend htmlFor='username' className="form-legend">Username</legend>
-                <input type="text" name="username" placeholder="Give_Leo_Oscar" className="form-input" onBlur={usernameChecker} />
+                <legend>{props.type + " Form"}</legend>
 
-                <legend htmlFor="email" className="form-legend">Email</legend>
-                <input type="email" placeholder="jon_doe@gmail.com" className="form-input" onBlur={emailChecker} />
+                <label htmlFor='username'>Username</label>
+                <input type="text" name="username" placeholder="Give_Leo_Oscar" onBlur={usernameChecker} />
 
-                <legend htmlFor="passoword" className="form-legend">Password</legend>
-                <input type="password" name="password" placeholder="123456" className="form-input" onBlur={passwordChecker} />
+                <label htmlFor="email">Email</label>
+                <input type="email" placeholder="jon_doe@gmail.com" onBlur={emailChecker} />
 
-                <legend htmlFor="confirmPassoword" className="form-legend">Password</legend>
-                <input type="password" name="confirmPassword" placeholder="123456" className="form-input" onChange={confirmPasswordChecker} />
+                <label htmlFor="passoword">Password</label>
+                <input type="password" name="password" placeholder="123456" onBlur={passwordChecker} />
+
+                <label htmlFor="confirmPassoword">Confirm Password</label>
+                <input type="password" name="confirmPassword" placeholder="123456" onChange={confirmPasswordChecker} />
 
                 <button type="submit">{props.type}</button>
             </fieldset>

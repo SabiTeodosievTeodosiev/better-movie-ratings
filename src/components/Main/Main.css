@@ -1,4 +1,8 @@
 .main {
-    background-color:bisque;
+    background-color: rgb(240, 239, 214);
     flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: center;
 }

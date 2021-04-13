@@ -9,10 +9,10 @@ class HeaderNav extends Component {
     render() {
         return (
             <ul className='header-nav'>
-                <li className='header-nav-li'>Home</li>
-                <li className='header-nav-li'>Movies</li>
-                <li className='header-nav-li'>Favourites</li>
-                <li className='header-nav-li'>About</li>
+                <li>Home</li>
+                <li>Movies</li>
+                <li>Favourites</li>
+                <li>About</li>
             </ul>
         );
     }

@@ -1,11 +1,10 @@
 .header {
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: lightyellow;
+    background-color: rgb(248, 118, 231);
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    /* align-content: space-between; */
     justify-content: space-between;
-    /* border: 2px solid red; */
+    border-bottom: 2px solid rgb(255, 153, 0);
 }

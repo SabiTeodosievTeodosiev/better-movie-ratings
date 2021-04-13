@@ -5,7 +5,6 @@ import './Main.css';
 function Main(props) {
     return (
         <main className='main'>
-            <MovieCard />
             <LoginForm />
         </main>
     );
