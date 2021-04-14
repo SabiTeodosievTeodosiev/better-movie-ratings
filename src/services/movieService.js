@@ -1,22 +1,26 @@
-import api from './api';
+import { movieDbBaseUrl, movieDbKey } from './api';
 
-function useMovieJson(movieJson) {
-    console.log(movieJson);
-}
-
-// http://www.omdbapi.com/?t=Jupiter+Ascending&y=2015&plot=full
+// http://www.omdbapi.com/?t=Jupiter+Ascending&y=2015&plot=full&apikey=69636c87
 const getMovieByTitleAndYear = (title, year, plotIsFull) => {
-    return fetch(`${api.movieDbBaseUrl}?t=${title}&y=${year}&plot=${plotIsFull ? 'full' : ''}`)
+    const movieUrl = movieDbBaseUrl
+        + "?t=" + escape(title)
+        + (year === '' ? '' : ('&year=' + year))
+        + (plotIsFull ? '&plot=full' : '')
+        + '&apikey=' + movieDbKey;
+
+    return fetch(movieUrl)
         .then(res => res.json())
-        .then(useMovieJson)
         .catch((err) => console.log(err));
 }
 
-// http://www.omdbapi.com/?i=tt1617661&plot=full
+// http://www.omdbapi.com/?i=tt1617661&plot=full&apikey=69636c87
 const getMovieById = (id, plotIsFull) => {
-    return fetch(`${api.movieDbBaseUrl}?i=${id}&plot=${plotIsFull ? 'full' : ''}`)
+    const movieUrl = movieDbBaseUrl
+        + '?i=' + id
+        + '&plot=' + (plotIsFull ? 'full' : '');
+
+    return fetch(movieUrl)
         .then(res => res.json())
-        .then(useMovieJson)
         .catch((err) => console.log(err));
 }
 
