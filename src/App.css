@@ -20,3 +20,11 @@
     align-items: stretch;
     justify-content: space-between;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}

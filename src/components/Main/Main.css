@@ -1,5 +1,5 @@
 .main {
-    background-color: rgb(240, 239, 214);
+    background-color: rgb(240,240,240);
     flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;

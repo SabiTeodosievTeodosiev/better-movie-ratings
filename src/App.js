@@ -1,10 +1,10 @@
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
 import './utils/firebase';
 import './App.css';
+import Header from './components/shared/Header/Header';
+import Footer from './components/shared/Footer/Footer';
+import Main from './components/Main/Main';
 
-function App() {
+function App(props) {
     console.log('Process started' + process.env.PORT);
 
     return (
