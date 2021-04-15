@@ -32,19 +32,29 @@ function Form(props) {
             <fieldset>
                 <legend>{props.type + " Form"}</legend>
 
-                <label htmlFor='username'>Username</label>
-                <input type="text" name="username" placeholder="Give_Leo_Oscar" onBlur={usernameChecker} />
+                <div className="fieldset-row">
+                    <label htmlFor='username'>Username</label>
+                    <input type="text" name="username" placeholder="Give_Leo_Oscar" onBlur={usernameChecker} />
+                </div>
 
-                <label htmlFor="email">Email</label>
-                <input type="email" placeholder="jon_doe@gmail.com" onBlur={emailChecker} />
+                <div className="fieldset-row">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" placeholder="jon_doe@gmail.com" onBlur={emailChecker} />
+                </div>
 
-                <label htmlFor="passoword">Password</label>
-                <input type="password" name="password" placeholder="123456" onBlur={passwordChecker} />
+                <div className="fieldset-row">
+                    <label htmlFor="passoword">Password</label>
+                    <input type="password" name="password" placeholder="123456" onBlur={passwordChecker} />
+                </div>
 
-                <label htmlFor="confirmPassoword">Confirm Password</label>
-                <input type="password" name="confirmPassword" placeholder="123456" onChange={confirmPasswordChecker} />
+                <div className="fieldset-row">
+                    <label htmlFor="confirmPassoword">Confirm Password</label>
+                    <input type="password" name="confirmPassword" placeholder="123456" onChange={confirmPasswordChecker} />
+                </div>
 
-                <button type="submit">{props.type}</button>
+                <div className="fieldset-row">
+                    <input type="submit">{props.type}</input>
+                </div>
             </fieldset>
         </form>
     );
