@@ -1,3 +1,28 @@
 .contacts {
-    
+    width: 100%;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.contacts .info {
+/* padding-bottom: 1rem; */
+line-height: 2;
+}
+
+.contacts .info h2 {
+    font-size: 3rem;
+    color: darkblue;
+}
+
+.contacts .info p {
+font-size: 1.5rem;
+color: olive;
+}
+
+.contacts iframe {
+border: none;
 }

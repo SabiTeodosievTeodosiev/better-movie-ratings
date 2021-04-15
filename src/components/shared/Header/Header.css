@@ -11,5 +11,5 @@
 }
 
 .header li a:active {
-    background-color: blueviolet !important;
+    background-color: blueviolet;
 }
