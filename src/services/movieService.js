@@ -4,7 +4,7 @@ import { movieDbBaseUrl, movieDbKey } from './api';
 const getMovieByTitleAndYear = (title, year, plotIsFull) => {
     const movieUrl = movieDbBaseUrl
         + "?t=" + escape(title)
-        + (year === '' ? '' : ('&year=' + year))
+        + (year == '' ? '' : ('&year=' + year))
         + (plotIsFull ? '&plot=full' : '')
         + '&apikey=' + movieDbKey;
 
