@@ -1,6 +1,6 @@
 import "./HeaderNav.css";
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 class HeaderNav extends Component {
     constructor(props) {
@@ -10,10 +10,12 @@ class HeaderNav extends Component {
     render() {
         return (
             <ul className='header-nav'>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/all">Movies</Link></li>
-                <li><Link to="/search">Find Movie</Link></li>
-                <li><Link to="/">Profile</Link></li>
+                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/all" exact>All Movies</NavLink></li>
+                {/* MAKE /all /all/currentUserId OR SEND TO /all IF NOT LOGGED IN */}
+                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/all">My Movies</NavLink></li>
+                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/search">Add Movie</NavLink></li>
+                {/* CHANGE Guest WHEN LOGGED IN */}
+                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/user">Guest</NavLink></li>
             </ul>
         );
     }

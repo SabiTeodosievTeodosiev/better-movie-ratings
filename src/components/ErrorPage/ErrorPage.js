@@ -2,7 +2,14 @@ import './ErrorPage.css';
 
 function ErrorPage(props) {
     return (
-        <h1>Error Page</h1>
+        <div className="error-page">
+            <section>
+                <h1>404</h1>
+                <p>Sorry,</p>
+                <p>page does not exist,</p>
+                <p>wrong url or invalid request</p>
+            </section>
+        </div>
     );
 }
 

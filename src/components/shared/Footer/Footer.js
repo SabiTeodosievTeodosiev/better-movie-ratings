@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import FooterNav from './FooterNav/FooterNav';
-import FooterMisc from './FooterMisc/FooterMisc';
+import FooterCopyright from './FooterCopyright/FooterCopyright';
 import './Footer.css';
 
 class Footer extends Component {
@@ -12,7 +12,7 @@ class Footer extends Component {
         return (
             <footer className='footer'>
                 <FooterNav />
-                <FooterMisc />
+                <FooterCopyright />
             </footer>
         );
     }
