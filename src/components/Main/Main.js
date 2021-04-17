@@ -12,7 +12,7 @@ function Main(props) {
     return (
         <main className='main'>
             <Switch>
-                <Route path="/" exact component={Home} />
+                <Route path="/" exact component={All} />
                 <Route path="/all" exact component={All} />
                 <Route path="/all/:userId" component={All} />
                 <Route path="/user" exact component={User} />
