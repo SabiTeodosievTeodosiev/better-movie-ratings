@@ -52,12 +52,11 @@ function UserForm(props) {
         if (props.type === "login") {
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Signed in
+                    console.log('Signed in');
                     var user = userCredential.user;
+                    console.log('user credential:');
                     console.log(user);
                     props.history.push('/');
-                    // history.pushState({}, "/");
-                    // ...
                 })
                 .catch((error) => {
                     var errorCode = error.code;
@@ -69,8 +68,9 @@ function UserForm(props) {
         if (props.type === "register") {
             auth.createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Signed in
+                    console.log('Registered');
                     var user = userCredential.user;
+                    console.log('user credential:');
                     console.log(user);
                     props.history.push('/');
                 })

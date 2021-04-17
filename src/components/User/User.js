@@ -6,16 +6,17 @@ import "./User.css";
 function User(props) {
     let user = auth.currentUser;
 
-    if (!user) {        
+    if (!user) {
         return (
             <div className="user">
                 < UserForm {...props} type="login" />
-                < UserForm {...props} type = "register" />
+                < UserForm {...props} type="register" />
             </div>
         );
     }
     else {
         auth.signOut();
+        console.log('Signed out');
 
         return (
             <Redirect to="/" />
