@@ -1,12 +1,11 @@
-import './utils/firebase';
-import './App.css';
 import Header from './components/shared/Header/Header';
 import Footer from './components/shared/Footer/Footer';
 import Main from './components/Main/Main';
+import './utils/firebase';
+import './App.css';
 
 function App(props) {
     // console.log('Process started' + process.env.PORT);
-
     return (
         <div className="site-wrapper">
             <Header />

@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { auth } from '../../../utils/firebase';
 import "./UserForm.css";
+// import { history } from 'react-router-dom';
 
 function UserForm(props) {
     const [username, setUsername] = useState('');
@@ -44,16 +46,55 @@ function UserForm(props) {
             password
         };
 
-        console.log('User object to send:');
-        console.log(objToSend);
+        // console.log('User object to send:');
+        // console.log(objToSend);
+
+        if (props.type === "login") {
+            auth.signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    var user = userCredential.user;
+                    console.log(user);
+                    props.history.push('/');
+                    // history.pushState({}, "/");
+                    // ...
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.log('Firebase auth error with code: ' + errorCode + 'and message: ' + errorMessage);
+                });
+        }
+
+        if (props.type === "register") {
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    var user = userCredential.user;
+                    console.log(user);
+                    props.history.push('/');
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.log('Firebase auth error with code: ' + errorCode + 'and message: ' + errorMessage);
+                });
+        }
     }
 
-    let confirmPasswordRow;
+    let confirmPasswordRow, usernameRow;
     if (props.type === "register") {
-        confirmPasswordRow = <div className="fieldset-row">
+        confirmPasswordRow = (<div className="fieldset-row">
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input type="password" name="confirmPassword" placeholder="123456" onChange={confirmPasswordChecker} />
-        </div>;
+        </div>);
+
+        usernameRow = (
+            <div className="fieldset-row">
+                <label htmlFor='username'>Username</label>
+                <input type="text" name="username" placeholder="Give_Leo_Oscar" onBlur={usernameChecker} />
+            </div>
+        );
     }
 
     return (
@@ -61,10 +102,7 @@ function UserForm(props) {
             <fieldset>
                 <legend>{props.type + " Form"}</legend>
 
-                <div className="fieldset-row">
-                    <label htmlFor='username'>Username</label>
-                    <input type="text" name="username" placeholder="Give_Leo_Oscar" onBlur={usernameChecker} />
-                </div>
+                {usernameRow}
 
                 <div className="fieldset-row">
                     <label htmlFor="email">Email</label>

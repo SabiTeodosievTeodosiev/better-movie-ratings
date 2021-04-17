@@ -5,9 +5,9 @@ import MovieSearchForm from "./MovieSearchForm/MovieSearchForm";
 
 function Form(props) {
     if (props.type === "login")
-        return <UserForm type="login" />;
+        return <UserForm {...props} />;
     else if (props.type === "register")
-        return <UserForm type="register" />;
+        return <UserForm {...props} />;
     else if (props.type === "search")
         return <MovieSearchForm />;
     // else

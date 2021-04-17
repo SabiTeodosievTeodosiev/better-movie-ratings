@@ -21,7 +21,21 @@ function MovieSearchForm(props) {
     const handlePostMovie = (e) => {
         e.preventDefault();
 
+        const movieObjToPost = {
+            ...fetchedData,
+            storyRating: e.target.story.value,
+            suspenseRating: e.target.suspense.value,
+            originalityRating: e.target.originality.value,
+            actingRating: e.target.acting.value,
+            realismRating: e.target.realism.value,
+            settingRating: e.target.setting.value,
+            soundtrackRating: e.target.soundtrack.value,
+            compositionRating: e.target.composition.value,
+            settingRating: e.target.setting.value,
+            cgiRating: e.target.cgi.value,
+        };
 
+        console.log(movieObjToPost);
     }
 
     return (
@@ -136,7 +150,7 @@ function MovieSearchForm(props) {
                     <FieldsetRowStars criteria="setting" />
                     <FieldsetRowStars criteria="soundtrack" />
                     <FieldsetRowStars criteria="composition" />
-                    <FieldsetRowStars criteria="special effects" />
+                    <FieldsetRowStars criteria="cgi" />
 
                     <div className="fieldset-row">
                         <input type="submit" value="Add to my movies" />
