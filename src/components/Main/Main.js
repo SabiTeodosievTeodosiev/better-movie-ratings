@@ -5,9 +5,7 @@ import All from '../All/All';
 import Home from '../Home/Home';
 import Contacts from '../Contacts/Contacts';
 import ErrorPage from '../ErrorPage/ErrorPage';
-import MovieSearchForm from '../Form/MovieSearchForm/MovieSearchForm';
-import LoginForm from '../Form/UserForm/LoginForm/LoginForm';
-import RegisterForm from '../Form/UserForm/RegisterForm/RegisterForm';
+import Form from '../Form/Form';
 import User from '../User/User';
 
 function Main(props) {
@@ -17,10 +15,10 @@ function Main(props) {
                 <Route path="/" exact component={Home} />
                 <Route path="/all" exact component={All} />
                 <Route path="/all/:userId" component={All} />
-                <Route path="/search" component={MovieSearchForm} />
                 <Route path="/user" exact component={User} />
-                <Route path="/login" component={LoginForm} />
-                <Route path="/register" component={RegisterForm} />
+                <Route path="/login" exact render={(props) => < Form type="login" />} />
+                <Route path="/register" exact render={(props) => < Form type="register" />} />
+                <Route path="/search" exact render={(props) => < Form type="search" />} />
                 <Route path="/contacts" component={Contacts} />
                 <Route path="/about" component={About} />
                 <Route component={ErrorPage} />
