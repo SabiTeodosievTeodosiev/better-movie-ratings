@@ -7,8 +7,7 @@ class HeaderNav extends Component {
     // constructor(props) {
     //     super(props);
     // }
-
-
+    
 
     render() {
         let user = auth.currentUser;

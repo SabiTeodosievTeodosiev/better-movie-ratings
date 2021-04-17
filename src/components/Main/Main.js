@@ -8,13 +8,21 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 import Form from '../Form/Form';
 import User from '../User/User';
 import { auth } from '../../utils/firebase';
+import { useEffect, useState } from 'react';
+import Home from '../Home/Home';
 // import { useState } from 'react';
 
 function Main(props) {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        auth.onAuthStateChanged(setUser)
+    }, []);
+
     return (
         <main className='main'>
             <Switch>
-                <Route path="/" exact component={All} />
+                <Route path="/" exact component={Home} />
                 <Route path="/all" exact component={All} />
                 <Route path="/all/:userId" component={All} />
                 {/* <Route path="/user" exact component={User} /> */}
