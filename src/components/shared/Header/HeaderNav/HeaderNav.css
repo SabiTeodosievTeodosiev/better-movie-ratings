@@ -1,14 +1,11 @@
 .header-nav {
     text-align: center;
     display: flex;
-    /* align-self: flex-end; */
     flex-flow: row wrap;
     align-content: space-between;
     align-items: center;
     list-style: none;
-    /* align-self: flex-end; */
-    /* border: 2px solid black; */
-
+    justify-content: stretch;
 }
 
 .header-nav a {

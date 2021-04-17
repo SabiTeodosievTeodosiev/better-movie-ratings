@@ -2,7 +2,7 @@ import './Main.css';
 import { Route, Switch } from 'react-router-dom';
 import About from '../About/About';
 import All from '../All/All';
-import Home from '../Home/Home';
+// import Home from '../Home/Home';
 import Contacts from '../Contacts/Contacts';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import Form from '../Form/Form';

@@ -1,8 +1,8 @@
 import './MovieSearchForm.css';
 import './FieldsetRowStars/FieldsetRowStars'
 import movieService from '../../../services/movieService';
-import { useState, useEffect } from 'react';
-import { Redirect, useHistory, withRouter } from 'react-router-dom';
+import { useState } from 'react';
+// import { Redirect, useHistory, withRouter } from 'react-router-dom';
 import FieldsetRowStars from './FieldsetRowStars/FieldsetRowStars';
 
 function MovieSearchForm(props) {
@@ -16,18 +16,12 @@ function MovieSearchForm(props) {
         movieService.getMovieByTitleAndYear(title, year)
             .then((res) => setFetchedData(res))
             .catch((err) => console.log(err));
-
-        console.clear();
-        console.log(fetchedData);
     }
 
     const handlePostMovie = (e) => {
         e.preventDefault();
 
 
-        // ADD STAR RATINGS
-        // const movieToAddToDb = { ...fetchedData };
-        // <Redirect to=""
     }
 
     return (
@@ -38,7 +32,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="title">Search by title</label>
-                        <input placeholder="    The Hobbit"
+                        <input placeholder="The Hobbit"
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
@@ -49,7 +43,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="title">Search by year</label>
-                        <input placeholder="    2021"
+                        <input placeholder="2021"
                             type="text"
                             value={year}
                             onChange={(e) => setYear(e.target.value)}
@@ -70,7 +64,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="title">Movie Title</label>
-                        <input placeholder="    The Hobbit"
+                        <input placeholder="The Hobbit"
                             type="text"
                             disabled
                             value={fetchedData.Title}
@@ -81,7 +75,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="release-date">Release Date</label>
-                        <input placeholder="    2021"
+                        <input placeholder="2021"
                             type="text"
                             disabled
                             value={fetchedData.Released}
@@ -92,7 +86,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="runtime">Runtime</label>
-                        <input placeholder="    90min"
+                        <input placeholder="90min"
                             type="text"
                             disabled
                             value={fetchedData.Runtime}
@@ -103,7 +97,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="genre">Genre</label>
-                        <input placeholder="    Action"
+                        <input placeholder="Action"
                             type="text"
                             disabled
                             value={fetchedData.Genre}
@@ -114,7 +108,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="director">Director</label>
-                        <input placeholder="    Micael Bay"
+                        <input placeholder="Micael Bay"
                             type="text"
                             disabled
                             value={fetchedData.Director}
@@ -125,7 +119,7 @@ function MovieSearchForm(props) {
 
                     <div className="fieldset-row">
                         <label htmlFor="actors">Actors</label>
-                        <input placeholder="    Brad Pitt"
+                        <input placeholder="Brad Pitt"
                             type="text"
                             disabled
                             value={fetchedData.Actors}

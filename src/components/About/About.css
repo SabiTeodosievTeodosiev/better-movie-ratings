@@ -9,7 +9,7 @@
     flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: baseline;
+    justify-content: center;
     text-align: center;
 }
 

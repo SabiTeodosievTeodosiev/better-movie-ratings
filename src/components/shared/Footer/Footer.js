@@ -4,9 +4,9 @@ import FooterCopyright from './FooterCopyright/FooterCopyright';
 import './Footer.css';
 
 class Footer extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (

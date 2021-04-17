@@ -16,6 +16,7 @@
 
 .form fieldset,
 .form legend {
+    text-transform: capitalize;
     border: 2px solid rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     background-color: #F8F8F8;
@@ -47,6 +48,7 @@
     height: 2rem;
     border: 2px solid lightgray;
     border-radius: 4px;
+    padding-left: 2em;
 }
 
 .form input[type="submit"] {
@@ -57,6 +59,7 @@
     background-color: #2D2D2D;
     border-radius: 4px;
     border: none;
+    text-transform: uppercase;
 }
 
 .form input:focus {
