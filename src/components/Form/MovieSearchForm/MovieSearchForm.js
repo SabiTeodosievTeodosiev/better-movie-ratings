@@ -1,8 +1,7 @@
 import './MovieSearchForm.css';
-import './FieldsetRowStars/FieldsetRowStars'
-import movieService from '../../../services/movieService';
+import './FieldsetRowStars/FieldsetRowStars';
+import {getMovieByTitleAndYear} from '../../../services/movieService';
 import { useState } from 'react';
-// import { Redirect, useHistory, withRouter } from 'react-router-dom';
 import FieldsetRowStars from './FieldsetRowStars/FieldsetRowStars';
 
 function MovieSearchForm(props) {
@@ -13,7 +12,7 @@ function MovieSearchForm(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        movieService.getMovieByTitleAndYear(title, year)
+        getMovieByTitleAndYear(title, year)
             .then((res) => setFetchedData(res))
             .catch((err) => console.log(err));
     }
@@ -31,7 +30,6 @@ function MovieSearchForm(props) {
             settingRating: e.target.setting.value,
             soundtrackRating: e.target.soundtrack.value,
             compositionRating: e.target.composition.value,
-            settingRating: e.target.setting.value,
             cgiRating: e.target.cgi.value,
         };
 

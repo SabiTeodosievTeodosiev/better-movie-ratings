@@ -2,7 +2,7 @@ import "./All.css";
 // import { useEffect } from 'react';
 
 function All(props) {
-    const userId = props.match.params.userId;
+    // const userId = props.match.params.userId;
     // console.log(`userId is ${userId}`);
     // const userId = (props.match.params.userId == undefined) ? '' : props.match.params.userId;
 

@@ -1,28 +1,25 @@
-import { movieDbBaseUrl, movieDbKey } from './api';
+const movieDbBaseUrl = 'http://www.omdbapi.com/';
+const movieDbKey = '69636c87';
 
 // http://www.omdbapi.com/?t=Jupiter+Ascending&y=2015&plot=full&apikey=69636c87
-const getMovieByTitleAndYear = (title, year, plotIsFull) => {
+export const getMovieByTitleAndYear = (title, year, plotIsFull) => {
     const movieUrl = movieDbBaseUrl
         + "?t=" + escape(title)
         + (year === '' ? '' : ('&year=' + year))
         + (plotIsFull ? '&plot=full' : '')
         + '&apikey=' + movieDbKey;
 
+    function trimProps(res) {
+        return ({
+            "Title": res.Title, "Released": res.Released, "Runtime": res.Runtime, "Genre": res.Genre, "Director": res.Director, "Actors": res.Actors
+        });
+    }
+
     return fetch(movieUrl)
         .then(res => res.json())
+        .then((res) => trimProps(res))
         .catch((err) => console.log(err));
 }
-
-// http://www.omdbapi.com/?i=tt1617661&plot=full&apikey=69636c87
-// const getMovieById = (id, plotIsFull) => {
-//     const movieUrl = movieDbBaseUrl
-//         + '?i=' + id
-//         + '&plot=' + (plotIsFull ? 'full' : '');
-
-//     return fetch(movieUrl)
-//         .then(res => res.json())
-//         .catch((err) => console.log(err));
-// }
 
 // const example = {
 //     "Title": "Jupiter Ascending",
