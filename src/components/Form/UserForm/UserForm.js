@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { auth } from '../../../utils/firebase';
 import "./UserForm.css";
-// import { history } from 'react-router-dom';
 
 function UserForm(props) {
     const [username, setUsername] = useState('');

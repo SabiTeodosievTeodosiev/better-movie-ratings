@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import HeaderNav from "./HeaderNav/HeaderNav";
+import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 class Header extends Component {
@@ -11,7 +11,7 @@ class Header extends Component {
     render() {
         return (
             <header className='header'>
-                <HeaderLogo />
+                <Link to="/"><section className='header-logo'>Better Movie Ratings</section></Link>
                 <HeaderNav />
             </header>
         );

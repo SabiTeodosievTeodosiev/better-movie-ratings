@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 .header {
     color: #264653;
     width: 100%;
@@ -12,4 +14,10 @@
 
 .header li a:active {
     background-color: blueviolet;
+}
+
+.header .header-logo {
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+    text-shadow: 2px 4px 5px rgba(42, 157, 143, 30%);
 }

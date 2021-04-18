@@ -21,7 +21,7 @@ function App(props) {
     }, []);
 
     return (
-        <div className="site-wrapper">
+        <div className="app">
             <Header />
             <main className='main'>
                 <Switch>
@@ -30,7 +30,7 @@ function App(props) {
                     <Route path="/all/:userId" component={All} />
                     <Route path="/login" exact render={(props) => < Form {...props} type="login" />} />
                     <Route path="/register" exact render={(props) => < Form {...props} type="register" />} />
-                    <Route path="/search" exact render={(props) => < Form {...props} type="search" />} />
+                    <Route path="/add" exact render={(props) => < Form {...props} type="add" />} />
                     <Route path="/contacts" component={Contacts} />
                     <Route path="/about" component={About} />
                     <Route path="/logout" exact render={props => {

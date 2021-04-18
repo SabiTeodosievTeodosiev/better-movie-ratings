@@ -8,7 +8,7 @@ function Form(props) {
         return <UserForm {...props} />;
     else if (props.type === "register")
         return <UserForm {...props} />;
-    else if (props.type === "search")
+    else if (props.type === "add")
         return <MovieSearchForm />;
     // else
     //     return <Redirect to="/" />
