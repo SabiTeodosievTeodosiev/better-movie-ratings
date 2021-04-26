@@ -6,7 +6,7 @@ function FieldsetRowStars(props) {
 
     return (
         <div className="fieldset-row fieldset-row-stars">
-            <label htmlFor="release-date">Rate {props.criteria}</label>
+            <label htmlFor="release-date">{props.criteria}</label>
             <div className="rate">
                 <input type="radio" id={props.criteria + "-star10"} name={props.criteria} value="10" />
                 <label htmlFor={props.criteria + "-star10"} title="text">10 stars</label>

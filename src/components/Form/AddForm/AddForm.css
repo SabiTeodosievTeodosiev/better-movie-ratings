@@ -1,0 +1,14 @@
+.form-column-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.form-column {
+    padding: 2rem;
+    flex: 0 0 50%;
+    min-width: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}

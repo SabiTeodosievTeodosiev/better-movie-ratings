@@ -1,8 +1,8 @@
 .form {
-    flex: 1;
-    margin: 7vh auto;
-    width: 100%;
-    padding: 4vh 5vw;
+    /* REMOVE AFTER STAR FIX */
+    /* min-width: 60%; */
+    margin: 2rem auto;
+    /* flex: 1 1 80vw; */
 }
 
 .form fieldset {
@@ -15,21 +15,23 @@
 }
 
 .form fieldset,
-.form legend {
+.form fieldset legend {
     text-transform: capitalize;
     border: 2px solid rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     background-color: #F8F8F8;
 }
 
-.form legend {
+.form fieldset legend {
     margin-left: -1.2rem;
     padding: 0.5rem 2rem 0.5rem 1rem;
     min-width: 5rem;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.form .fieldset-row {
+
+
+.fieldset-row {
     margin-bottom: 0.5rem;
     height: 4rem;
     position: relative;
@@ -38,7 +40,7 @@
     justify-content: flex-start;
 }
 
-.form .fieldset-row:last-child {
+.fieldset-row:last-child {
     height: auto;
     padding-bottom: 0;
 }

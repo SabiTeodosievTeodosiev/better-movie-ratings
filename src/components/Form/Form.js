@@ -1,7 +1,7 @@
 // import { Redirect } from "react-router";
 import "./Form.css";
 import UserForm from './UserForm/UserForm';
-import MovieSearchForm from "./MovieSearchForm/MovieSearchForm";
+import AddForm from "./AddForm/AddForm";
 
 function Form(props) {
     if (props.type === "login")
@@ -9,7 +9,7 @@ function Form(props) {
     else if (props.type === "register")
         return <UserForm {...props} />;
     else if (props.type === "add")
-        return <MovieSearchForm />;
+        return <AddForm {...props} />;
     // else
     //     return <Redirect to="/" />
 }

@@ -99,7 +99,7 @@ function UserForm(props) {
     return (
         <form className='form user-form' method='post' onSubmit={submitHandler}>
             <fieldset>
-                <legend>{props.type + " Form"}</legend>
+                <legend>{props.type}</legend>
 
                 {usernameRow}
 

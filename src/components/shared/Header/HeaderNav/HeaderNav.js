@@ -16,16 +16,16 @@ class HeaderNav extends Component {
             myMoviesLi = <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to={'/all/:' + user.uid}>{`${user.email}'s Movies`}</NavLink></li>;
             logOutLi = <li><NavLink to="/logout">Log Out</NavLink></li>;
         } else {
-            logInLi = <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/login">Log In</NavLink></li>;
+            logInLi = <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/login">Login</NavLink></li>;
             registerLi = <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/register">Register</NavLink></li>;
         }
 
         return (
             <ul className='header-nav'>
-                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/all" exact>All Movies</NavLink></li>
+                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/all" exact>Catalog</NavLink></li>
                 {/* MAKE /all /all/currentUserId OR SEND TO /all IF NOT LOGGED IN */}
                 {myMoviesLi}
-                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/add">Add Movie</NavLink></li>
+                <li><NavLink activeStyle={{ backgroundColor: 'gold' }} to="/add">Add</NavLink></li>
                 {logInLi}
                 {logOutLi}
                 {registerLi}
