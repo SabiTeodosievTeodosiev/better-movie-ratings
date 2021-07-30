@@ -6,7 +6,7 @@
 
 .form-column {
     padding: 2rem;
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     min-width: fit-content;
     display: flex;
     flex-flow: column nowrap;
