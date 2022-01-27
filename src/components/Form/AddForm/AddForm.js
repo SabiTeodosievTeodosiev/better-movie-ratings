@@ -6,18 +6,22 @@ import FieldsetRowStars from './FieldsetRowStars/FieldsetRowStars';
 
 function AddForm(props) {
     const [title, setTitle] = useState('');
-    const [year, setYear] = useState('');
+    const [year, setYear] = useState(1900);
     const [fetchedData, setFetchedData] = useState({});
+    const [backgroundImage, setBackgroundImage] = useState(null);
 
     const searchMovie = function (title, year) {
         getMovieByTitleAndYear(title, year)
-            .then((res) => setFetchedData(res))
+            .then((res) => {
+                setFetchedData(res);
+                setBackgroundImage(res.Poster);
+            })
             .catch((err) => console.log(err));
     }
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const movieObjToPost = {
             ...fetchedData,
             storyRating: e.target.story.value,
@@ -34,6 +38,7 @@ function AddForm(props) {
         console.log(movieObjToPost);
     }
 
+    // style = "background-image: url(https://accounts.icharts.net/stage/icharts-images/chartbook-images/Chart1457601371484.png); background-repeat: no-repeat;width: 100%;height: 100%;"
     return (
         <form onSubmit={handleSubmit} className="form">
             <fieldset>
@@ -46,7 +51,7 @@ function AddForm(props) {
                             <input placeholder="The Hobbit"
                                 type="text"
                                 value={title}
-                                onBlur={(e) => {
+                                onChange={(e) => {
                                     setTitle(e.target.value);
                                     searchMovie(title, year);
                                 }
@@ -57,13 +62,13 @@ function AddForm(props) {
                         </div>
 
                         <div className="fieldset-row">
-                            <label htmlFor="title">Year</label>
+                            <label htmlFor="year">Year</label>
                             <input placeholder="2021"
-                                type="text"
+                                type="number"
                                 value={year}
-                                onBlur={(e) => setYear(e.target.value)}
-                                name="title"
-                                id="movie-title-input"
+                                onChange={(e) => setYear(e.target.value)}
+                                name="year"
+                                id="movie-year-input"
                             />
                         </div>
 

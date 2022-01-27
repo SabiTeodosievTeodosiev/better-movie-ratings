@@ -9,4 +9,3 @@ I prefer regular .CSS files having the same name as the component they belong to
 Form component logic is reused by conditional rendering of parent component and props.
 
 I am accessing the OMDB(IMDB) API using movieService.js
-

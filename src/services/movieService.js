@@ -5,13 +5,13 @@ const movieDbKey = '69636c87';
 export const getMovieByTitleAndYear = (title, year, plotIsFull) => {
     const movieUrl = movieDbBaseUrl
         + "?t=" + escape(title)
-        + (year === '' ? '' : ('&year=' + year))
+        + (year === 1900 ? '' : ('&year=' + year))
         + (plotIsFull ? '&plot=full' : '')
         + '&apikey=' + movieDbKey;
 
     function trimProps(res) {
         return ({
-            "Title": res.Title, "Released": res.Released, "Runtime": res.Runtime, "Genre": res.Genre, "Director": res.Director, "Actors": res.Actors
+            "Title": res.Title, "Released": res.Released, "Runtime": res.Runtime, "Genre": res.Genre, "Director": res.Director, "Actors": res.Actors, "Poster": res.Poster
         });
     }
 
